@@ -5,7 +5,7 @@ let end;
 let openSet = [];
 let closedSet = [];
 let path = [];
-let w = 20;
+let w = 10;
 
 function removeFromArray(arr, elt) {
   // Could use indexOf here instead to be more efficient
@@ -95,9 +95,9 @@ function draw() {
     return;
   }
   
-  for (var i = 0; i < closedSet.length; i++) {
+  /*for (var i = 0; i < closedSet.length; i++) {
     closedSet[i].highlight(color(255, 0, 0, 10));
-  }
+  }*/
 
   for (var i = 0; i < openSet.length; i++) {
     openSet[i].highlight(color(0, 255, 0, 50));
@@ -117,7 +117,7 @@ function draw() {
   } */
 
   noFill();
-  stroke(255);
+  stroke(255, 0, 255);
   strokeWeight(w / 10);
   beginShape();
   for (var i = 0; i < path.length; i++) {
